@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const repositories = fetch('https://api.github.com/users/mayconbalves/repos?per_page=50');
+
+        console.log(repositories);
+
+        repositories.then(res => {
+            console.log(res.json());
+        })
+        .then(response => console.log(response))
+        .catch(error => console.log(error));
+    </script>
+</body>
+</html>
